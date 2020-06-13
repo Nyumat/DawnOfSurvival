@@ -1,20 +1,30 @@
 //
 //  main.swift
-//  DawnOfSurvival
 //      Text Based Adventure Game
-//  Created by Thomas Nyuma on 6/5/20.
+//  Created by @Nyumat on 6/5/20.
 //  Copyright © 2020 Thomas Nyuma. All rights reserved.
 //
 
 import Foundation
 
-// structures for game elements
+// structures & their methods for game elements
 
-struct onoffSwitches {
+struct toggleSwitches {
     
-    var gameOn:Bool!
-    var gameOff:Bool!
-    var gameOver:Bool!
+    var gameOn:Bool
+    var gameOff:Bool
+    var gameOver:Bool
+    
+    func runGame(){
+        toggle.gameOn = true
+        toggle.gameOff = false
+        print("""
+    DAWN   OF  SURVIVAL
+     Made by @Nyumnat
+        Enjoy :)
+""")
+        
+    }
     
     func finishGame() {
         
@@ -24,7 +34,7 @@ struct onoffSwitches {
         if userInnput == "yes"{
             runGame()
         } else {
-            gameOff = true
+            toggle.gameOff = true
         }
     }
 
@@ -70,14 +80,8 @@ struct Person {
     var sleepy: Bool
     
     
-}
 
-    func runGame(){
-        enact.gameOn = true
-        enact.gameOff = false
-        print("Welcome to dawn of survival")
-        
-    }
+
 
     
     func eatFood() {
@@ -112,13 +116,13 @@ struct Person {
         print("\(player.userName)'s Sleepiness has been reduced back to 0.")
         print("\(player.userName)'s sanity is now back to it's default value of 50.")
         
-}
+    }
     func cookFood() {
                print("I will now cook this food")
             
             
         }
-
+    }
 
 struct Dog {
     var health: Int
@@ -144,21 +148,23 @@ struct TimeOfDay {
     
 }
 
-//Beginning of DOS from a user input standpoint
+//Beginning of D.O.S from a user input standpoint
 
-runGame()
+toggle.runGame()
 
 
 print("Before you begin Dawn of Survival, please enter a name for your player.")
 
 var player = Person(userName:readLine()! ,health: 100,hunger:50,Sleepiness: 0,Strength: 100,Armor: 0,Sanity: 50,healthy: true,hungry: false, sleepy: false)
 var dog = Dog(health: 11, runningSpeed: 1)
-var toggle = onoffSwitches(gameOn:Bool,gameOff:Bool,gameOver:Bool)
+var toggle = toggleSwitches(gameOn:true, gameOff:false , gameOver: true)
 
-print("Hello \(player.userName)...the world has ended, the year is 2058, and you're stuck on an Island... All alone. You're a good man, but life just his you in the worst ways possible sometimes. Welcome to the World of Astoria.")
+print("\(player.userName)...the world has ended and the year is 2058, your plane to mexico crashed and you're a sole survivor stuck on an Island... All alone. You're a good man, but life just his you in the worst ways possible sometimes. Welcome to the World of Astoria.")
+
 
 if player.health < 50 {
     player.healthy = false
+    print("\(player.userName), your health has dropped below 50 xp. Remember, if you get to 0, you die and the game ends. Eat food and sleep to replenish your health.")
 }
 
 if player.Sleepiness > 20 {
@@ -244,4 +250,4 @@ if userInput5 == "yes" {
 }
 
 
-*/
+
