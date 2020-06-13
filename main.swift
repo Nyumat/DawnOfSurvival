@@ -30,11 +30,14 @@ struct toggleSwitches {
         
         print("The game is now over...would you like to replay?...Yes or No?")
         
-        let userInnput = readLine()
-        if userInnput == "yes"{
+        let endInput = readLine()
+        if endInput == "yes"{
             runGame()
         } else {
             toggle.gameOff = true
+            while toggle.gameOff == true {
+                break
+            }
         }
     }
 
@@ -118,17 +121,17 @@ struct Person {
         
     }
     func cookFood() {
-               print("I will now cook this food")
-            
-            
+               print("I will now cook this food!")
+               print("Cooking...")
         }
     }
 
 struct Dog {
     var health: Int
     var runningSpeed = Int.random(in:1...10)
-    
-    
+    var Stength:Int
+    var foodPoints:Int
+    var Armor:Int
 }
 
 struct Rabbit {
@@ -150,14 +153,20 @@ struct TimeOfDay {
 
 //Beginning of D.O.S from a user input standpoint
 
-toggle.runGame()
 
+var toggle = toggleSwitches(gameOn:true, gameOff:false , gameOver: true)
 
+while toggle.gameOn == false{
 print("Before you begin Dawn of Survival, please enter a name for your player.")
 
 var player = Person(userName:readLine()! ,health: 100,hunger:50,Sleepiness: 0,Strength: 100,Armor: 0,Sanity: 50,healthy: true,hungry: false, sleepy: false)
-var dog = Dog(health: 11, runningSpeed: 1)
-var toggle = toggleSwitches(gameOn:true, gameOff:false , gameOver: true)
+    
+    //for later use
+/*var dog = Dog(health: 11, runningSpeed: 1,Stength: 30, foodPoints:20,Armor:5)
+
+var time = TimeOfDay(hour:1...24,minute:0...60)
+*/
+// for later use
 
 print("\(player.userName)...the world has ended and the year is 2058, your plane to mexico crashed and you're a sole survivor stuck on an Island... All alone. You're a good man, but life just his you in the worst ways possible sometimes. Welcome to the World of Astoria.")
 
@@ -172,8 +181,7 @@ if player.Sleepiness > 20 {
         player.Strength -= 50
         player.Sanity -= 20
     }
-    print("I'm sleepy...")
-    
+    print("I'm starting to get sleepy...")
 }
 
 print("Continue?...'yes' or 'no'")
@@ -245,9 +253,16 @@ if userInput5 == "yes" {
     
 } else if userInput5 ==  "no" {
         print("Alright, I'm going to keep seaeching for firewood.")
+    }
     
-
+    
+    
+    
+    
+    
+    
+    
+    
 }
-
 
 
