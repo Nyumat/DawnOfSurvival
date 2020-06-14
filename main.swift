@@ -153,13 +153,13 @@ struct TimeOfDay {
 
 //Beginning of D.O.S from a user input standpoint
 
-
+var player = Person(userName:readLine()! ,health: 100,hunger:50,Sleepiness: 0,Strength: 100,Armor: 0,Sanity: 50,healthy: true,hungry: false, sleepy: false)
 var toggle = toggleSwitches(gameOn:true, gameOff:false , gameOver: true)
-
-while toggle.gameOn == false{
+toggle.runGame()
+    
 print("Before you begin Dawn of Survival, please enter a name for your player.")
 
-var player = Person(userName:readLine()! ,health: 100,hunger:50,Sleepiness: 0,Strength: 100,Armor: 0,Sanity: 50,healthy: true,hungry: false, sleepy: false)
+
     
     //for later use
 /*var dog = Dog(health: 11, runningSpeed: 1,Stength: 30, foodPoints:20,Armor:5)
@@ -186,7 +186,7 @@ if player.Sleepiness > 20 {
 
 print("Continue?...'yes' or 'no'")
 
-var userInput = readLine()
+    let userInput = readLine()
 
     if userInput == "yes"   {
         
@@ -202,7 +202,7 @@ print("Damn....Now that I've been exploring for a while, there's not much around
 
 print("Continue?...'yes' or 'no'")
 
-var userInput2 = readLine()
+    _ = readLine()
 switch  userInput  {
 case  "yes" :
     print("Oh look, an apple tree! I should try and get those apples from there and eat it.")
@@ -214,7 +214,7 @@ default:
 
 print("Should you climb the apple tree? 'Yes' or 'No'")
 
-var userInput3 = readLine()
+    let userInput3 = readLine()
 if userInput3 == "Yes"{
     
     player.Sleepiness += 30
@@ -229,7 +229,7 @@ if userInput3 == "Yes"{
 }
 
 print("Continue?...Yes or No")
-var userInput4 = readLine()
+    let userInput4 = readLine()
 
 if userInput4 == "Yes"{
     
@@ -244,7 +244,7 @@ player.eatFood()
 print("It's starting to get late, I need to make a shelter and get more fire wood...")
 
 print("Ohh a river...should swim for a bit? 'yes' or 'no'")
- var userInput5 = readLine()
+    let userInput5 = readLine()
 
 
 if userInput5 == "yes" {
@@ -262,7 +262,6 @@ if userInput5 == "yes" {
     
     
     
-    
-}
+
 
 
