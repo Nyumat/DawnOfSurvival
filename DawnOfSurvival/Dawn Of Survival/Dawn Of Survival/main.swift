@@ -41,23 +41,20 @@ struct toggleSwitches {
         }
     }
     
-    func choosePlayer () {
-        
-    }
 
 }
 
 struct Peopleonplane {
     
-    var Kayla:String
-    var Tyler:String
-    var Tom:String
-    var Zach:String
-    var Jake:String
-    var Andrew:String
-    var Martha:String
-    var Stephanie:String
-    
+    var passangers =  ["Kayla","Tyler","Tom","DJ","Jerrome","Andrew","Martha","Stephanie"]
+
+    func choosePLayer () {
+        
+        for _ in  passangers {
+            print(passangers)
+        }
+        
+    }
     
 }
 
@@ -85,7 +82,6 @@ struct Person {
     var healthy: Bool
     var hungry: Bool
     var sleepy: Bool
-    
     
 
 
@@ -166,6 +162,9 @@ var player = Person(userName:readLine()! ,health: 100,hunger:50,Sleepiness: 0,St
 var toggle = toggleSwitches(gameOn:true, gameOff:false , gameOver: true)
 
 let animals = ["dog","rabbit",]
+
+
+
     
 // True begginning of DOS. Choose a player
 
@@ -269,7 +268,11 @@ if userInput5 == "yes" {
     
     }
     
-
+print("Would you like to kill yourself?")
+let userInput6 = readLine()
+    if userInput6 == "yes"{
+    toggle.finishGame()
+}
     
     
     
