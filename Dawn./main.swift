@@ -121,13 +121,9 @@ if userInput5 == "yes" {
         print("Alright, I'm going to keep seaeching for firewood.")
     
     }
+
     
-print("Would you like to kill yourself?")
-let userInput6 = readLine()
-    if userInput6 == "yes"{
-    toggle.finishGame()
-}
-    
+
     
     
     
