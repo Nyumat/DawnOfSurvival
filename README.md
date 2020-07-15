@@ -10,7 +10,7 @@ Building this game wasn't too difficult, as there are no assets/OOP to worry abo
 so it created some unwanted stresses/pains. The game is ran within a loop, that over time adds and diminishes certain xp point atrributes depending on wheter
 you're eating, etc. etc.
 
-## To run the game...
+## To run the game..
 
 
 
