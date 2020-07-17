@@ -12,5 +12,6 @@ you're eating, etc. etc.
 
 ## To run the game..
 
+First you will need to set up a virtual env for the file to run in.
 
 
