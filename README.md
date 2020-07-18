@@ -2,7 +2,7 @@
 
 A text based, survival game that can be played in either the macOS Terminal or Xcode command line. 
 
-Dawn of Survival places you in the point-of-view of one of many characters to play as. Your goal is to simply survive as long as possible until help can arrive. 
+Dawn of Survival places you in the point-of-view of one of many characters to play as. Your goal is to simply survive as long as possible until adequate help can arrive. 
 
 ## The Development Process
 
