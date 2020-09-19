@@ -1,4 +1,4 @@
-### DawnOfSurvival
+### DawnOfSurvival [OSX]
 
 A text based, survival game that can be played in either the macOS Terminal or Xcode command line. 
 
@@ -12,6 +12,6 @@ you're eating, etc. etc.
 
 ## To run the game..
 
-First you will need to set up a virtual env for the file to run in.
+Because this is made in Xcode, all you'll need to do is download the .xcodeproj file and run it in the terminal.
 
 
